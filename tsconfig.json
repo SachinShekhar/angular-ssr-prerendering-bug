@@ -16,7 +16,12 @@
     "paths": {
       "@angular-ssr-prerendering-bug/website": ["libs/website/src/index.ts"],
       "@angular-ssr-prerendering-bug/admin": ["libs/admin/src/index.ts"],
-      "@angular-ssr-prerendering-bug/dashboard": ["libs/dashboard/src/index.ts"]
+      "@angular-ssr-prerendering-bug/dashboard": [
+        "libs/dashboard/src/index.ts"
+      ],
+      "@angular-ssr-prerendering-bug/artificial-intelligence": [
+        "libs/artificial-intelligence/src/index.ts"
+      ]
     },
     "rootDir": "."
   },

@@ -23,9 +23,7 @@
               "apps/angular-ssr-prerendering-bug/src/favicon.ico",
               "apps/angular-ssr-prerendering-bug/src/assets"
             ],
-            "styles": [
-              "apps/angular-ssr-prerendering-bug/src/styles.css"
-            ],
+            "styles": ["apps/angular-ssr-prerendering-bug/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -86,9 +84,7 @@
               "apps/angular-ssr-prerendering-bug/src/favicon.ico",
               "apps/angular-ssr-prerendering-bug/src/assets"
             ],
-            "styles": [
-              "apps/angular-ssr-prerendering-bug/src/styles.css"
-            ],
+            "styles": ["apps/angular-ssr-prerendering-bug/src/styles.css"],
             "scripts": []
           }
         },
@@ -99,9 +95,7 @@
               "apps\\angular-ssr-prerendering-bug\\tsconfig.app.json",
               "apps\\angular-ssr-prerendering-bug\\tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "server": {
@@ -171,9 +165,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps\\angular-ssr-prerendering-bug-e2e\\tsconfig.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -191,10 +183,7 @@
               "libs/website/tsconfig.lib.json",
               "libs/website/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/website/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/website/**"]
           }
         },
         "test": {
@@ -221,10 +210,7 @@
               "libs/admin/tsconfig.lib.json",
               "libs/admin/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/admin/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/admin/**"]
           }
         },
         "test": {
@@ -251,10 +237,7 @@
               "libs/dashboard/tsconfig.lib.json",
               "libs/dashboard/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/dashboard/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/dashboard/**"]
           }
         },
         "test": {
@@ -263,6 +246,36 @@
             "jestConfig": "libs/dashboard/jest.config.js",
             "tsConfig": "libs/dashboard/tsconfig.spec.json",
             "setupFile": "libs/dashboard/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "artificial-intelligence": {
+      "projectType": "library",
+      "root": "libs/artificial-intelligence",
+      "sourceRoot": "libs/artificial-intelligence/src",
+      "prefix": "angular-ssr-prerendering-bug",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/artificial-intelligence/tsconfig.lib.json",
+              "libs/artificial-intelligence/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/artificial-intelligence/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/artificial-intelligence/jest.config.js",
+            "tsConfig": "libs/artificial-intelligence/tsconfig.spec.json",
+            "setupFile": "libs/artificial-intelligence/src/test-setup.ts"
           }
         }
       },

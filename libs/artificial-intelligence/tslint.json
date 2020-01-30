@@ -1,0 +1,17 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "angularSsrPrerenderingBug",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "angular-ssr-prerendering-bug",
+      "kebab-case"
+    ]
+  }
+}
