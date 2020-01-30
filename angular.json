@@ -18,7 +18,7 @@
             "main": "apps/angular-ssr-prerendering-bug/src/main.ts",
             "polyfills": "apps/angular-ssr-prerendering-bug/src/polyfills.ts",
             "tsConfig": "apps\\angular-ssr-prerendering-bug\\tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "apps/angular-ssr-prerendering-bug/src/favicon.ico",
               "apps/angular-ssr-prerendering-bug/src/assets"
@@ -39,7 +39,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -48,6 +47,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
