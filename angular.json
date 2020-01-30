@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist\\apps\\angular-ssr-prerendering-bug",
+            "outputPath": "dist/angular-ssr-prerendering-bug/browser",
             "index": "apps/angular-ssr-prerendering-bug/src/index.html",
             "main": "apps/angular-ssr-prerendering-bug/src/main.ts",
             "polyfills": "apps/angular-ssr-prerendering-bug/src/polyfills.ts",
@@ -102,6 +102,51 @@
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/angular-ssr-prerendering-bug/server",
+            "main": "apps/angular-ssr-prerendering-bug/server.ts",
+            "tsConfig": "apps/angular-ssr-prerendering-bug/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "apps/angular-ssr-prerendering-bug/src/environments/environment.ts",
+                  "with": "apps/angular-ssr-prerendering-bug/src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "angular-ssr-prerendering-bug:build",
+            "serverTarget": "angular-ssr-prerendering-bug:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "angular-ssr-prerendering-bug:build:production",
+              "serverTarget": "angular-ssr-prerendering-bug:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "angular-ssr-prerendering-bug:build:production",
+            "serverTarget": "angular-ssr-prerendering-bug:server:production",
+            "routes": []
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }
